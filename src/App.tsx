@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import SiderbarSwitch from "./components/UI/SidebarSwitch/SidebarSwitch";
+import MessageList from "./components/Message/MessageList/MessageList";
+import { UserContextProvider } from "./components/context/UserContext";
 
-function App() {
+const App: React.FC = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <UserContextProvider>
+        <div className="chat">
+          <h1 className="chat__title">Chat application</h1>
+          <p className="chat__switch-user">Switch user</p>
+          <SiderbarSwitch />
+          <MessageList />
+        </div>
+      </UserContextProvider>
     </div>
   );
 }

@@ -1,0 +1,70 @@
+.message {
+  display: flex;
+  width: 70%;
+  margin-bottom: 20px;
+
+  &--right {
+    margin-left: auto;
+
+    .message__user-image {
+      order: 1;
+      margin-left: 10px;
+    }
+  }
+
+  &__card {
+    flex-basis: 100%;
+
+    &-image {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  &__user-image {
+    flex-basis: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  &__name {
+    flex-basis: 100%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 7px;
+  }
+
+  &__image {
+    width: 110px;
+    height: 100px;
+  }
+
+  &__text {
+    font-size: 1.1rem;
+  }
+
+  &__actions {
+    margin-top: 5px;
+    margin-left: 10px;
+    color: gray;
+    font-size: 1rem;
+
+    &-button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      color: gray;
+      font-size: 1rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.spacer {
+  margin: 0 5px;
+}
